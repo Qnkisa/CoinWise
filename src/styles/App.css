@@ -1,0 +1,672 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --green:#0ecb81;
+  --red:red;
+  --gradient:linear-gradient(25deg,#2600fc,#ff00ea);
+  --blue:#090322;
+  --background-gradient:linear-gradient(to bottom, #411233, #090322);
+  --lighter-blue:#36209c;
+}
+
+body{
+  font-family: 'Space Grotesk', sans-serif;
+  background-color: var(--blue);
+}
+
+header{
+  width: 100%;
+  padding: 2rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+nav{
+  max-width: 1300px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo p{
+  user-select: none;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+nav ul{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  gap: 40px;
+  list-style: none;
+}
+
+nav ul li a {
+  font-size: 1.25rem;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: all .3s;
+}
+
+nav ul li a:hover {
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: var(--gradient);
+  color: transparent;
+  transition: all .3s;
+}
+
+.nav-socials{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  font-size: 1.5rem;
+}
+
+.nav-social a{
+  color: white;
+  cursor: pointer;
+  padding: 10px 10px 3px 11px;
+  border-radius: 50%;
+  background-image: var(--gradient);
+  border: 1px solid var(--blue);
+  transition: all .3s;
+}
+
+.hamburger{
+  cursor: pointer;
+  display: none;
+}
+
+.hamburger-line{
+  width: 25px;
+  height: 4px;
+  display: block;
+  background-color: white;
+  margin-bottom: 5px;
+}
+
+.hamburger-line:nth-child(2){
+  position: relative;
+  left: 5px;
+}
+
+/*home hero start*/
+
+.home-hero{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  background-image: var(--background-gradient)
+}
+
+.home-hero-helper{
+  width: 100%;
+  position: relative;
+}
+
+.home h1{
+  font-size: 6rem;
+  text-transform: uppercase;
+  max-width: 950px;
+  color: white;
+  line-height: 90px;
+  text-align: center;
+  margin: 0 auto 60px;
+}
+
+.home h1 span{
+  background: var(--gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.home-hero img{
+  width: 100px;
+}
+
+.home-hero a{
+  background-image: var(--gradient);
+  padding: 20px 40px;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: white;
+  text-decoration: none;
+  border-radius: 35px;
+  font-weight: bold;
+}
+
+.home-hero-currencies{
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 10%;
+}
+
+.home-hero-currencies img {
+  animation: moveUpDown 2s infinite;
+}
+
+@keyframes moveUpDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/*home market start*/
+
+.home-market{
+  color: white;
+  width: 100%;
+  padding: 5vh 2rem;
+}
+
+.home-market-helper{
+  max-width: 1300px;
+  margin:auto;
+}
+
+.home h2,.home h3{
+  font-size: 3rem;
+  margin-bottom: 30px;
+}
+
+.market-coin-info{
+  background-image: var(--gradient);
+  width: 100%;
+  padding: 1rem 2rem;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  align-items: center;
+  text-align: center;
+}
+
+.market-coin-info p{
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+.coin-row{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  align-items: center;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  border-bottom: 1px solid white;
+}
+
+.coin-row p{
+  font-size: 1.25rem;
+}
+
+.coin-name{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+}
+
+.coin-name img{
+  width: 50px;
+}
+
+.market-button-div{
+  max-width: 400px;
+  padding: 2rem 1rem;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.market-button-div button{
+  padding: 10px 16px;
+  font-size: 1.25rem;
+  font-weight: bold;
+  border-radius: 50%;
+  background-color: var(--blue);
+  color: white;
+  border: 2px solid white;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.market-button-div button:hover{
+  color: var(--blue);
+  background-color: white;
+}
+
+.market-button-div button.market-active-button{
+  background-color: white;
+  color: var(--blue);
+}
+
+/*home choose us start*/
+
+.home-choose-us{
+  color: white;
+  padding: 10vh 2rem;
+  width: 100%;
+}
+
+.home-choose-us-helper{
+  max-width: 1300px;
+  margin: auto;
+}
+
+.choose-us-icon{
+  padding: 15px 15px 10px 15px;
+  border-radius: 15px;
+  font-size: 1.5rem;
+  color: white;
+  background-image: var(--gradient);
+  display: inline-block;
+}
+
+.home-choose-us-grid{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 50px;
+  align-items: center;
+}
+
+.home-choose-us-grid > img{
+  width: 100%;
+}
+
+.home-choose-us-div{
+  padding: 2rem;
+  border-radius: 15px;    
+  border: 1px solid hsla(0,0%,51%,.25);
+  background-color: hsla(0,0%,100%,.05);;
+}
+
+.home-choose-us-div:first-child{
+  margin-bottom: 40px;
+}
+
+.home-choose-us-div-top{
+  display: flex;
+  width: 100%;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.home-choose-us-div-top p{
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.home-choose-us-div-bottom p{
+  line-height: 30px;
+}
+
+/*home join start*/
+
+.home-join{
+  padding: 10vh 2rem;
+  max-width: 1300px;
+  margin: auto;
+  text-align: center;
+}
+
+.home-join-helper{
+  width: 100%;
+  position: relative;
+}
+
+.home-join-currencies{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  bottom: 30vh;
+  padding: 0 10%;
+}
+
+.home-join-currencies img{
+  width: 100px;
+}
+
+.home-join-currencies img {
+  animation: moveUpDownJoin 2s infinite;
+}
+
+.home h4{
+  font-size: 4rem;
+  text-transform: uppercase;
+  color: white;
+  max-width: 700px;
+  margin: 0 auto 15px;
+  line-height: 70px;
+}
+
+.home h4 span{
+  background: var(--gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.home-join p{
+  font-size: 1.25rem;
+  color: white;
+  max-width: 500px;
+  line-height: 25px;
+  margin: 0 auto 70px;
+}
+
+.home-join a{
+  background-image: var(--gradient);
+  padding: 20px 40px;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: white;
+  text-decoration: none;
+  border-radius: 35px;
+  font-weight: bold;
+}
+
+@keyframes moveUpDownJoin {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/*footer start*/
+
+footer{
+  text-align: center;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10vh;
+  background-image: linear-gradient(to top, #411233, #090322);;
+}
+
+footer img{
+  height: 45vh;
+  user-select: none;
+}
+
+footer p{
+  font-size: 1.5rem;
+  color: white;
+  margin-bottom: 30px;
+}
+
+footer p a{
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+}
+
+footer p a::after{
+  width: 0;
+  height: 1px;
+  content: "";
+  display: block;
+  background-color: white;
+  transition: all .3s;
+}
+
+footer p a:hover::after{
+  width: 100%;
+}
+
+.footer-socials{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.footer-socials a{
+  color: white;
+  cursor: pointer;
+  padding: 13px 14px 3px;
+  border-radius: 50%;
+  background-image: var(--gradient);
+  border: 1px solid var(--blue);
+  font-size: 2rem;
+  transition: all .3s;
+}
+
+/*media queries start*/
+
+@media (max-width:1054px) {
+  .nav-socials{
+    display: none;
+  }
+
+  .hamburger{
+    display: block;
+    z-index: 100;
+    position: relative;
+    transition: all .3s;
+  }
+
+  .hamburger-line{
+    transition: all .3s;
+  }
+
+  .hamburger.active .hamburger-line{
+    background-color: black;
+  }
+
+  .hamburger.active .hamburger-line:first-child{
+    transform: translateY(9.5px) rotate(45deg);
+  }
+
+  .hamburger.active .hamburger-line:nth-child(2){
+    opacity: 0;
+  }
+
+  .hamburger.active .hamburger-line:last-child{
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  nav ul{
+    position: fixed;
+    display: block;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: -100%;
+    text-align: center;
+    padding-top: 25vh;
+    background-color: white;
+    z-index: 80;
+    transition: all .3s;
+  }
+
+  nav ul.active{
+    left: 0;
+  }
+
+  nav ul li{
+    margin: 30px auto;
+  }
+
+  nav ul li a{
+    font-size: 2.25rem;
+    color: black;
+  }
+
+  .home-hero-currencies{
+    display: none;
+  }
+  
+  .home-join-currencies{
+    display: none;
+  }
+
+  .home-hero-helper{  
+    padding: 0 1rem;
+  }
+
+  .home-choose-us-grid{
+    display: block;
+    text-align: center;
+  }
+  
+  .home-choose-us-grid > img{
+    width: 450px;
+    margin: 30px auto;
+    text-align: center;
+  }
+
+  .home-choose-us-div-bottom p{
+    text-align: left;
+  }
+
+  footer{
+    text-align: center;
+    padding: 10vh 2rem 5rem;
+    padding-top: 15vh;
+    justify-content: center;
+  }
+
+  footer img{
+    display: none;
+  }
+}
+
+@media (max-width:800px) {
+  .coin-row{
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  .coin-change{
+    display: none;
+  }
+
+  .coin-market-cap{
+    display: none;
+  }
+
+  .market-coin-info{
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  .market-coin-info p:nth-child(3){
+    display: none;
+  }
+
+  .market-coin-info p:last-child{
+    display: none;
+  }
+}
+
+@media (max-width:600px) {
+  .home h1{
+    font-size: 3.5rem;
+    line-height: 55px;
+    margin-bottom: 40px;
+  }
+
+  .home-hero a{
+    font-size: 1.25rem;
+    padding: 15px 30px;
+  }
+
+  .home-join a{
+    font-size: 1.25rem;
+    padding: 15px 30px;
+  }
+
+  .market-coin-info p{
+    font-size: 1.25rem;
+  }
+
+  .coin-row img{
+    width: 35px;
+  }
+
+  .coin-row p{
+    font-size: 1.25rem;
+  }
+
+  .home h2,.home h3{
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+  }
+
+  .home-choose-us-div-bottom p{
+    font-size: 1rem;
+    line-height: 25px;
+  }
+  
+  .home-choose-us-grid > img{
+    width: 250px;
+    margin: 30px auto;
+    text-align: center;
+  }
+
+  .home-choose-us-div-top p{
+    font-size: 1.25rem;
+  }
+
+  .home h4{
+    font-size: 2.75rem;
+    line-height: 45px;
+  }
+
+  .home-join p{
+    font-size: 1rem;
+    line-height: 25px;
+    margin-bottom: 40px;
+  }
+
+  footer p{
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+  }
+
+  .footer-socials a{
+    font-size: 1.5rem;
+    padding: 11px 11px 3px;
+  }
+
+  .footer-socials{
+    gap: 15px;
+  }
+}
