@@ -58,6 +58,7 @@ nav ul li a {
   text-decoration: none;
   color: white;
   font-weight: bold;
+  cursor: pointer;
   transition: all .3s;
 }
 
@@ -486,6 +487,11 @@ footer p a:hover::after{
 
   .hamburger-line{
     transition: all .3s;
+  }
+
+  .hamburger.active{
+    position: fixed;
+    right: 2rem;
   }
 
   .hamburger.active .hamburger-line{

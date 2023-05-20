@@ -22,6 +22,8 @@ export default function Header() {
         top: document.getElementById('home-market').offsetTop,
         behavior: 'smooth'
       });
+
+      setNav(prevValue => !prevValue)
     };
 
     const handleChooseClick = () => {
@@ -29,6 +31,8 @@ export default function Header() {
         top: document.getElementById('home-choose-us').offsetTop,
         behavior: 'smooth'
       });
+
+      setNav(prevValue => !prevValue)
     };
 
     const handleJoinClick = () => {
@@ -36,6 +40,8 @@ export default function Header() {
         top: document.getElementById('home-join').offsetTop,
         behavior: 'smooth'
       });
+
+      setNav(prevValue => !prevValue)
     };
 
   return (
@@ -46,13 +52,13 @@ export default function Header() {
           </div>
           <ul id="menu" className={nav ? "menu active" : "menu"}>
             <li>
-              <a href="#" onClick={handleMarketClick}>Market</a>
+              <a onClick={handleMarketClick}>Market</a>
             </li>
             <li>
-              <a href="#" onClick={handleChooseClick}>Choose us</a>
+              <a onClick={handleChooseClick}>Choose us</a>
             </li>
             <li>
-              <a href="#" onClick={handleJoinClick}>Join</a>
+              <a onClick={handleJoinClick}>Join</a>
             </li>
           </ul>
           <div className="nav-socials">
